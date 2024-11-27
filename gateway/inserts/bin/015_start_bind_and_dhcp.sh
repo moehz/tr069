@@ -106,8 +106,8 @@ case "${USE_OPTION_43_MODE}" in
 	TOTAL_LENGTH=$(expr ${TOTAL_LENGTH} + ${?})
 	USE_OPTION_43="${USE_OPTION_43}:$( create_option_string 4 ${WAIT_INTERVAL_MULTIPLIER} )"
 	TOTAL_LENGTH=$(expr ${TOTAL_LENGTH} + ${?})
-	TOTAL_HEX_LENGTH="$(printf "%02x" ${TOTAL_LENGTH})"
-	USE_OPTION_43="option tr069-option-43 ${TOTAL_HEX_LENGTH}:${USE_OPTION_43};"
+	#TOTAL_HEX_LENGTH="$(printf "%02x" ${TOTAL_LENGTH})"
+	USE_OPTION_43="option tr069-option-43 ${USE_OPTION_43};"
     ;;
     *)
     mylogger "OPTION 43: ${USE_OPTION_43_MODE} -> disabled"
